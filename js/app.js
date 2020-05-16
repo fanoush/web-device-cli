@@ -44,7 +44,7 @@ function connect() {
     navigator.bluetooth.requestDevice({
         //filters: [{services: []}]
         optionalServices: [ bleHIDServiceUUID ], // bleNusServiceUUID
-        acceptAllDevices: false
+        acceptAllDevices: true
     })
     .then(device => {
         bleDevice = device; 
