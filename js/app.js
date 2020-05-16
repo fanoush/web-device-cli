@@ -3,7 +3,7 @@
 const bleNusServiceUUID  = '6e400001-b5a3-f393-e0a9-e50e24dcca9e';
 const bleNusCharRXUUID   = '6e400002-b5a3-f393-e0a9-e50e24dcca9e';
 const bleNusCharTXUUID   = '6e400003-b5a3-f393-e0a9-e50e24dcca9e';
-const bleHIDServiceUUID - '00001812-0000-1000-8000-00805f9b34fb';
+const bleHIDServiceUUID = '00001812-0000-1000-8000-00805f9b34fb';
 const MTU = 20;
 
 var bleDevice;
@@ -43,7 +43,7 @@ function connect() {
     console.log('Requesting Bluetooth Device...');
     navigator.bluetooth.requestDevice({
         //filters: [{services: []}]
-        optionalServices: [ bleHIDServiceUUID ], // https://github.com/makerdiary/web-device-cli
+        optionalServices: [ bleHIDServiceUUID ], // bleNusServiceUUID
         acceptAllDevices: false
     })
     .then(device => {
