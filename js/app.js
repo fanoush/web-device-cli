@@ -124,8 +124,8 @@ function onDisconnected() {
 function handleNotifications(event) {
     //console.log('notification');
     let value = event.target.value;
-    if (value.byteLength>MTU+2){
-        MTU=value.byteLength-2;
+    if (value.byteLength>MTU){
+        MTU=value.byteLength;
         console.log('MTU='+MTU);
     }
     // Convert raw data bytes to character values and use these to 
