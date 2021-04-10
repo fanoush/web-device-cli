@@ -40,6 +40,7 @@ function connect() {
                     'Please make sure the Web Bluetooth flag is enabled.');
         return;
     }
+    MTU=20;
     console.log('Requesting Bluetooth Device...');
     navigator.bluetooth.requestDevice({
         //filters: [{services: []}]
